@@ -179,7 +179,6 @@ li:hover{
     padding-bottom:50px;
     display: flex;
 }
-
 .cont1,.cont2{
     box-sizing: border-box;
     padding:45px 35px 25px 35px;
@@ -283,6 +282,9 @@ p{
 .inputs{
     margin-top:30px;
     display: flex;
+}
+label{
+    display: none;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
