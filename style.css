@@ -176,6 +176,7 @@ li:hover{
     width:85%;
     max-width:1615px;
     margin:45px auto 0 auto;
+    padding-bottom:50px;
     display: flex;
 }
 
