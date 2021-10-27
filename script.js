@@ -72,6 +72,8 @@ function selectImage(img_number,type){
         selectedThumbnail.classList.toggle('selectedThumbnail');
         images.style.transform=`translate(${-(img_number*100)}%)`;
         images.id=img_number;
+        images2.style.transform=`translate(${-(img_number*100)}%)`;
+        images2.id=img_number;
     }else{
         if(selectedThumbnailLB!=undefined)
         selectedThumbnailLB.classList.toggle('selectedThumbnail');
@@ -92,7 +94,6 @@ var addToCart=document.querySelector('.addToCart');
 plus.addEventListener('click',()=>changeAmount(1));
 minus.addEventListener('click',()=>changeAmount(-1));
 function changeAmount(number){
-    console.log("aef")
     amount.value=(amount.value*1)+number;
     if((amount.value*1)<0)
         amount.value=0;
