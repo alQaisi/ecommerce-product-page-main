@@ -193,10 +193,25 @@ li:hover{
     max-width:75%;
 }
 .mainImage{
-    display: block;
-    height: auto;
+    position: relative;
+    width:75%;
+    height:fit-content;
+    height:auto;
+    overflow: hidden;
     border-radius:17px;
-    cursor: pointer;
+    cursor: pointer;    
+}
+.images,.images2{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    transition:transform .45s cubic-bezier(0.215, 0.610, 0.355, 1);
+    transform: translate(0%);
+}
+.images img,.images2 img{
+    max-width:100%;
+    height: auto;
 }
 .thumbnail,.mainImage{
     width:75%;
@@ -359,24 +374,22 @@ svg:hover{
     stroke: hsl(26, 100%, 55%);
 }
 .overlay{
-    overflow-y: scroll;
-    position: fixed;
-    top:0;
+    position:absolute;
+    top: 0;
     left: 0;
+    right:0;
     bottom: 0;
-    right: 0;
     background-color: rgba(0, 0, 0,.6);
     opacity: 0;
     animation-name: initialMove;
     animation-duration: .25s;
     animation-fill-mode: forwards;
-    min-height: 100vh;
 }
 .overlayChild.lightBox{
     position: fixed;
     left: 50%;
-    top: 55%;
-    transform: translate(-50%, -50%);
+    top:12vh;
+    transform: translateX(-50%);
     opacity: 0;
     animation-delay: .15s;
     animation-name: initialMove;
@@ -389,15 +402,18 @@ svg:hover{
     animation-duration: .25s;
     animation-fill-mode: forwards;
 }
-.shownImage img{
-    position: relative;
-    width:100%;
-    height: auto;
-    max-width:575px;
-    border-radius:15px;
-}
 .shownImage{
     position: relative;
+}
+.shownImageCont{
+    position: relative;
+    width: 100%;
+    height:auto;
+    overflow: hidden;
+    border-radius:9px;
+}
+.images2,.thumbnail2{
+    max-width: 590px;
 }
 #nextLB,#previousLB{
     position: absolute;
@@ -430,8 +446,11 @@ svg:hover{
     margin: 25px 0;
     display: flex;
     width:100%;
-    max-width:575px;
-    justify-content: space-around;
+    width: 100%;
+    justify-content:center;
+}
+.thumbnail2 .thumbnailContainer{
+    margin: 0 15px;
 }
 .hide{
     animation-timing-function: ease-in-out;
@@ -511,10 +530,12 @@ svg:hover{
     }
 }
 @media only screen and (min-width:2160px){
-    .shownImage img,.thumbnail2{
-        width:100%;
+    .images2 img,.thumbnail2{
+        width:initial;
         height: auto;
-        max-width:initial;
+    }
+    .images2,.images2 img,.thumbnail2{
+        max-width:800px;
     }
 }
 @media only screen and (max-width:1330px) { 

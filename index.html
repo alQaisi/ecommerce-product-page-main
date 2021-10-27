@@ -49,7 +49,14 @@
   </div>
   <div class="container">
     <div class="cont1">
-      <img src="./images/image-product-1.jpg" alt="product1" class="mainImage">
+      <div class="mainImage">
+        <div class="images" id="0">
+            <img src="./images/image-product-1.jpg" alt="product1">
+            <img src="./images/image-product-2.jpg" alt="product2">
+            <img src="./images/image-product-3.jpg" alt="product3">
+            <img src="./images/image-product-4.jpg" alt="product4">
+        </div>
+      </div>
       <div class="thumbnail">
         <div class="thumbnailContainer selectedThumbnail">
           <img src="./images/image-product-1-thumbnail.jpg" alt="thumbnail1" id="thumbnail1">
@@ -89,7 +96,8 @@
       <div class="inputs">
         <div class="amount">
           <img id="minus" src="./images/icon-minus.svg" alt="-">
-          <input type="number" value="0" min=0 readonly>
+          <label for="amount"></label>
+          <input id="amount" type="number" value="0" min=0 readonly>
           <img id="plus" src="./images/icon-plus.svg" alt="+">
         </div>
         <button class="addToCart">
@@ -102,7 +110,15 @@
   <div class="overlay hidden">
     <div class="lightBox   overlayChild hidden">
       <div class="shownImage">
-        <img src="./images/image-product-1.jpg" alt="product1">
+        <div class="shownImageCont">
+          <div class="images2" id="0">
+            <img src="./images/image-product-1.jpg" alt="product1">
+            <img src="./images/image-product-2.jpg" alt="product2">
+            <img src="./images/image-product-3.jpg" alt="product3">
+            <img src="./images/image-product-4.jpg" alt="product4">
+          </div>
+        </div>
+        <!-- <img src="./images/image-product-1.jpg" alt="product1"> -->
         <svg id="previousLB" width="12" height="18" xmlns="http://www.w3.org/2000/svg">
           <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
         </svg>

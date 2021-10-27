@@ -19,7 +19,8 @@ var itemsNum=0;
 // LightBox & Images variables,functions start
 var LightBox=document.querySelector('.lightBox');
 var mainImage=document.querySelector('.mainImage');
-var shownImage=document.querySelector('.shownImage img');
+var images=document.querySelector('.images');
+var images2=document.querySelector('.images2');
 var thumbnail1Imgs=document.querySelectorAll('.thumbnail .thumbnailContainer');
 var thumbnail2Imgs=document.querySelectorAll('.thumbnail2 .thumbnailContainer');
 var previous=document.querySelector('#previous');
@@ -28,7 +29,7 @@ var previousLB=document.querySelector('#previousLB');
 var nextLB=document.querySelector('#nextLB');
 var selectedThumbnail=document.querySelector('.thumbnail .selectedThumbnail');
 var selectedThumbnailLB=document.querySelector('.thumbnail2 .selectedThumbnail');
-var closeLB=document.querySelector('#close')
+var closeLB=document.querySelector('#close');
 var number=0;
 
 // LightBox Controllers
@@ -52,7 +53,7 @@ mainImage.addEventListener('click',()=>{
         showOverlay(LightBox);
 });
 closeLB.addEventListener('click',()=>{
-    number=(mainImage.alt).slice(7)*1-1;
+    number=images.id*1;
     showOverlay(LightBox);
 })
 //
@@ -66,18 +67,18 @@ function selectImage(img_number,type){
     number=img_number;
     if(type=="normal"){
         if(selectedThumbnail!=undefined)
-            selectedThumbnail.classList.toggle('selectedThumbnail');
+        selectedThumbnail.classList.toggle('selectedThumbnail');
         selectedThumbnail=thumbnail1Imgs[img_number];
         selectedThumbnail.classList.toggle('selectedThumbnail');
-        mainImage.src=`./images/image-product-${img_number+1}.jpg`;
-        mainImage.alt=`product${img_number+1}`;
+        images.style.transform=`translate(${-(img_number*100)}%)`;
+        images.id=img_number;
     }else{
         if(selectedThumbnailLB!=undefined)
         selectedThumbnailLB.classList.toggle('selectedThumbnail');
         selectedThumbnailLB=thumbnail2Imgs[img_number];
         selectedThumbnailLB.classList.toggle('selectedThumbnail');
-        shownImage.src=`./images/image-product-${img_number+1}.jpg`;
-        shownImage.alt=`product${img_number+1}`;
+        images2.style.transform=`translate(${-(img_number*100)}%)`;
+        images2.id=img_number;
     }
 }
 // LightBox & Images variables,functions End
