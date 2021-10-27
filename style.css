@@ -585,7 +585,7 @@ svg:hover{
         max-width: 250px;
     }
 }
-@media only screen and (max-width:840px) { 
+@media only screen and (max-width:845px) { 
     .num{
         top:12px;
         right:102px;
