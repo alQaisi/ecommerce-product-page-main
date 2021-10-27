@@ -1,6 +1,5 @@
 var overlay=document.querySelector('.overlay');
 window.addEventListener('resize',()=>{
-    console.log(LightBox.offsetWidth)
     if(!(LightBox.classList.contains('hideChild') || LightBox.classList.contains('hidden'))){
         if(LightBox.offsetWidth<=422)
             showOverlay(LightBox);
