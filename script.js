@@ -1,7 +1,8 @@
 var overlay=document.querySelector('.overlay');
 window.addEventListener('resize',()=>{
+    console.log(LightBox.offsetWidth)
     if(!(LightBox.classList.contains('hideChild') || LightBox.classList.contains('hidden'))){
-        if(LightBox.offsetWidth<=420)
+        if(LightBox.offsetWidth<=422)
             showOverlay(LightBox);
     }else if(!(menu.classList.contains('hideChild') || menu.classList.contains('hidden'))){
         if(window.innerWidth>=700)
@@ -49,7 +50,7 @@ previous.addEventListener('click',()=>{
 })
 mainImage.addEventListener('click',()=>{
     selectImage(number,'lightbox');
-    if(window.innerWidth>840)
+    if(window.innerWidth>845)
         showOverlay(LightBox);
 });
 closeLB.addEventListener('click',()=>{
