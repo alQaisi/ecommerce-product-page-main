@@ -467,6 +467,7 @@ svg:hover{
 }
 .overlayChild.menuOverlay{
     position:fixed;
+    top: 0;
     background-color: white;
     width:70%;
     min-height:100%;
