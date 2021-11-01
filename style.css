@@ -374,7 +374,7 @@ svg:hover{
     stroke: hsl(26, 100%, 55%);
 }
 .overlay{
-    position:absolute;
+    position:fixed;
     top: 0;
     left: 0;
     right:0;
@@ -701,9 +701,14 @@ svg:hover{
         max-width: unset;
         width: 100%;
     }
+}
+@media only screen and (max-width:800px){
     .overlayChild.lightBox{
         position: fixed;
         margin:0;
+    }
+    .overlayChild.menuOverlay{
+        position:relative;
     }
 }
 @media only screen and (max-width:700px){
@@ -752,9 +757,9 @@ svg:hover{
         width:17px;
         height: auto;
     }
-    .overlayChild.menuOverlay{
+    /* .overlayChild.menuOverlay{
         position:relative;
-    }
+    } */
     .items2{
         min-width:95px;
     }
