@@ -466,7 +466,7 @@ svg:hover{
     display: none;
 }
 .overlayChild.menuOverlay{
-    position:relative;
+    position:fixed;
     background-color: white;
     width:70%;
     min-height:100%;
@@ -753,6 +753,9 @@ svg:hover{
     .menuIcon{
         width:17px;
         height: auto;
+    }
+    .menuOverlay{
+        position:relative;
     }
     .items2{
         min-width:95px;
