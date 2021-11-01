@@ -384,13 +384,17 @@ svg:hover{
     animation-name: initialMove;
     animation-duration: .25s;
     animation-fill-mode: forwards;
+    overflow-y: scroll;
 }
 .overlayChild.lightBox{
-    position: fixed;
-    left: 50%;
-    top:12vh;
-    transform: translateX(-50%);
+    position: relative;
+    margin: 15px auto 100px auto;
+    /* left: 50%; */
+    top:10vh;
+    /* transform: translateX(-50%); */
     opacity: 0;
+    max-width: 575px;
+    width:75%;
     animation-delay: .15s;
     animation-name: initialMove;
     animation-duration: .25s;
@@ -413,7 +417,7 @@ svg:hover{
     border-radius:9px;
 }
 .images2,.thumbnail2{
-    max-width: 590px;
+    max-width: 575px;
 }
 #nextLB,#previousLB{
     position: absolute;
@@ -462,7 +466,8 @@ svg:hover{
     display: none;
 }
 .overlayChild.menuOverlay{
-    position: relative;
+    position: fixed;
+    top:0;
     background-color: white;
     width:70%;
     min-height:100%;
@@ -536,6 +541,9 @@ svg:hover{
     }
     .images2,.images2 img,.thumbnail2{
         max-width:800px;
+    }
+    .overlayChild.lightBox{
+        max-width: 800px;
     }
 }
 @media only screen and (max-width:1330px) { 
