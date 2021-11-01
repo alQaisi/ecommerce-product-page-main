@@ -703,9 +703,7 @@ svg:hover{
     }
     .overlayChild.lightBox{
         position: fixed;
-    }
-    .overlay{
-        overflow-y: initial;
+        margin:0;
     }
 }
 @media only screen and (max-width:700px){
@@ -754,7 +752,7 @@ svg:hover{
         width:17px;
         height: auto;
     }
-    .menuOverlay{
+    .overlayChild.menuOverlay{
         position:relative;
     }
     .items2{
