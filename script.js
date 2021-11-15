@@ -1,3 +1,38 @@
+document.addEventListener('keydown',evt=>{
+    if(cart.classList.contains('hidden')){
+        var type="",direction;
+        if((LightBox.classList.contains('hideChild') || LightBox.classList.contains('hidden')))
+            type='normal'
+        else
+            type='lightbox';
+        if(evt.key=='ArrowRight'){
+            direction='next';
+            number==3?selectImage(0,type):selectImage(number+1,type);
+        }
+        else if(evt.key=='ArrowLeft'){
+            direction='previous';
+            number==0?selectImage(3,type):selectImage(number-1,type);
+        }else
+            return null;
+        var directions={
+            normal:{
+                next:next,
+                previous:previous
+            },
+            lightbox:{
+                next:nextLB,
+                previous:previousLB,
+            }
+        };
+        activateArrowIcons(directions[type][direction],350)
+    }
+});
+function activateArrowIcons(item,delay){
+    item.classList.toggle('activeBtn');
+    setTimeout(() => {
+        item.classList.toggle('activeBtn');
+    }, delay);
+}
 var overlay=document.querySelector('.overlay');
 window.addEventListener('resize',()=>{
     if(!(LightBox.classList.contains('hideChild') || LightBox.classList.contains('hidden'))){

@@ -427,7 +427,7 @@ svg:hover{
     border-radius:100%;
     cursor: pointer;
 }
-#nextLB:hover path,#previousLB:hover path{
+#nextLB:hover path,#previousLB:hover path,.activeBtn path{
     stroke:hsl(26, 100%, 55%);
 }
 #previousLB{
