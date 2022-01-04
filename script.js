@@ -66,14 +66,13 @@ var selectedThumbnail=document.querySelector('.thumbnail .selectedThumbnail');
 var selectedThumbnailLB=document.querySelector('.thumbnail2 .selectedThumbnail');
 var closeLB=document.querySelector('#close');
 var number=0;
-
 // LightBox Controllers
 nextLB.addEventListener('click',()=>{
     number==3?selectImage(0,'lightbox'):selectImage(number+1,'lightbox');
-})
+});
 previousLB.addEventListener('click',()=>{
     number==0?selectImage(3,'lightbox'):selectImage(number-1,'lightbox');
-})
+});
 //
 //MainImage Controllers
 next.addEventListener('click',()=>{
@@ -88,9 +87,12 @@ mainImage.addEventListener('click',()=>{
         showOverlay(LightBox);
 });
 closeLB.addEventListener('click',()=>{
-    number=images.id*1;
+    number=images.dataset.index*1;
     showOverlay(LightBox);
-})
+    setTimeout(() => {
+        selectImage(number,'lightbox');
+    },150);
+});
 //
 thumbnail1Imgs.forEach((item,index)=>{
     item.addEventListener('click',()=>selectImage(index,'normal'))
@@ -106,16 +108,16 @@ function selectImage(img_number,type){
         selectedThumbnail=thumbnail1Imgs[img_number];
         selectedThumbnail.classList.toggle('selectedThumbnail');
         images.style.transform=`translate(${-(img_number*100)}%)`;
-        images.id=img_number;
+        images.dataset.index=img_number;
         images2.style.transform=`translate(${-(img_number*100)}%)`;
-        images2.id=img_number;
+        images2.dataset.index=img_number;
     }else{
         if(selectedThumbnailLB!=undefined)
         selectedThumbnailLB.classList.toggle('selectedThumbnail');
         selectedThumbnailLB=thumbnail2Imgs[img_number];
         selectedThumbnailLB.classList.toggle('selectedThumbnail');
         images2.style.transform=`translate(${-(img_number*100)}%)`;
-        images2.id=img_number;
+        images2.dataset.index=img_number;
     }
 }
 // LightBox & Images variables,functions End
@@ -145,7 +147,7 @@ addToCart.addEventListener('click',()=>{
         total.textContent=`$${itemsNum*125}.00`;
         amount.value=0;
     }
-})
+});
 //Inputs variables end
 
 //Menu variables start
@@ -155,10 +157,10 @@ var closeMenu=document.querySelector('.closeMenu');
 
 menuIcon.addEventListener('click',()=>{
     showOverlay(menu);
-})
+});
 closeMenu.addEventListener('click',()=>{
     showOverlay(menu);
-})
+});
 //Menu variables end
 
 // Cart variables start
@@ -207,7 +209,7 @@ deleteItems.addEventListener('click',()=>{
 // Cart variables end
 
 //Show items start
-function showOverlay(item,type){
+function showOverlay(item){
     if(item.classList.contains('hidden') && overlay.classList.contains('hidden')){
         item.classList.remove('hidden');
         overlay.classList.remove('hidden');
@@ -221,4 +223,17 @@ function showOverlay(item,type){
         }
     }
 }
+overlay.addEventListener('click',function(evt){
+    if(evt.target==this){
+        if(LightBox.classList.contains('hidden') || LightBox.classList.contains('hideChild'))
+            showOverlay(menu);
+        else{
+            showOverlay(LightBox);
+            number=images.dataset.index*1;
+            setTimeout(() => {
+                selectImage(number,'lightbox');
+            },150);
+        }
+    } 
+});
 //Show items end
