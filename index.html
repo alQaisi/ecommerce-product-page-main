@@ -8,157 +8,159 @@
   <title>E-commerce product page</title>
 </head>
 <body>
-  <div class="header">
-    <div class="items1">
-      <img src="./images/icon-menu.svg" alt="menu" class="menuIcon">
-      <img src="./images/logo.svg" alt="sneakers" class="logo">
-      <div class="headerMenu">
-        <li class="menuItem">Collections</li>
-        <li class="menuItem">Men</li>
-        <li class="menuItem">Women</li>
-        <li class="menuItem">About</li>
-        <li class="menuItem">Contact</li>
+  <main>
+    <div class="header">
+      <div class="items1">
+        <img src="./images/icon-menu.svg" alt="menu" class="menuIcon">
+        <img src="./images/logo.svg" alt="sneakers" class="logo">
+        <div class="headerMenu">
+          <a class="menuItem">Collections</a>
+          <a class="menuItem">Men</a>
+          <a class="menuItem">Women</a>
+          <a class="menuItem">About</a>
+          <a class="menuItem">Contact</a>
+        </div>
       </div>
-    </div>
-    <div class="items2">
-      <span class="num hidden">0</span>
-      <div class="cartContainer">
-        <img src="./images/icon-cart.svg" alt="cart" class="cartIcon">
-        <div class="cart hidden">
-          <h4>Cart</h4>
-          <hr>
-          <div class="cartSection">
-            <h4>Your cart is empty.</h4>
-            <div class="cartItems hidden">
-              <img src="./images/image-product-1-thumbnail.jpg" alt="item" class="cartImage">
-              <p>
-                Fall Limited Edition Sneakers
-                <br>
-                <span class="quant">$125.00 x 0</span>
-                &nbsp;
-                <strong><span class="total">$0.00</span></strong>
-              </p>
-              <img src="./images/icon-delete.svg" alt="delete" class="delete">
+      <div class="items2">
+        <span class="num hidden">0</span>
+        <div class="cartContainer">
+          <img src="./images/icon-cart.svg" alt="cart" class="cartIcon">
+          <div class="cart hidden">
+            <h4>Cart</h4>
+            <hr>
+            <div class="cartSection">
+              <h4>Your cart is empty.</h4>
+              <div class="cartItems hidden">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="item" class="cartImage">
+                <p>
+                  Fall Limited Edition Sneakers
+                  <br>
+                  <span class="quant">$125.00 x 0</span>
+                  &nbsp;
+                  <strong><span class="total">$0.00</span></strong>
+                </p>
+                <img src="./images/icon-delete.svg" alt="delete" class="delete">
+              </div>
+              <button class="hidden">Checkout</button>
             </div>
-            <button class="hidden">Checkout</button>
           </div>
         </div>
-      </div>
-      <img src="./images/image-avatar.png" alt="avatar" class="avatar">
-    </div>
-  </div>
-  <div class="container">
-    <div class="cont1">
-      <div class="mainImage">
-        <div class="images" id="0">
-            <img src="./images/image-product-1.jpg" alt="product1">
-            <img src="./images/image-product-2.jpg" alt="product2">
-            <img src="./images/image-product-3.jpg" alt="product3">
-            <img src="./images/image-product-4.jpg" alt="product4">
-        </div>
-      </div>
-      <div class="thumbnail">
-        <div class="thumbnailContainer selectedThumbnail">
-          <img src="./images/image-product-1-thumbnail.jpg" alt="thumbnail1" id="thumbnail1">
-          <div class="thumbnail-overlay"></div>
-        </div>
-        <div class="thumbnailContainer">
-          <img src="./images/image-product-2-thumbnail.jpg" alt="thumbnail2" id="thumbnail2">
-          <div class="thumbnail-overlay"></div>
-        </div>
-        <div class="thumbnailContainer">
-          <img src="./images/image-product-3-thumbnail.jpg" alt="thumbnail3" id="thumbnail3">
-          <div class="thumbnail-overlay"></div>
-        </div>
-        <div class="thumbnailContainer">
-          <img src="./images/image-product-4-thumbnail.jpg" alt="thumbnail4" id="thumbnail4">
-          <div class="thumbnail-overlay"></div>
-        </div>
-      </div>
-      <svg id="previous" width="12" height="18" xmlns="http://www.w3.org/2000/svg">
-        <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
-      </svg>
-      <svg id="next" width="13" height="18" xmlns="http://www.w3.org/2000/svg">
-        <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
-      </svg>
-    </div>
-    <div class="cont2">
-      <h5>SNEAKER COMPANY</h5>
-      <h1>Fall Limited Edition Sneakers</h1>
-      <p>
-        These low-profile sneakers are your perfect casual wear companion. Featuring a 
-        durable rubber outer sole, they’ll withstand everything the weather can offer.
-      </p>
-      <div class="price">
-        <h2>$125.00</h2>
-        <h4>$250.00</h4>
-      </div>
-      <div class="inputs">
-        <div class="amount">
-          <img id="minus" src="./images/icon-minus.svg" alt="-">
-          <label for="amount"></label>
-          <input id="amount" type="number" value="0" min=0 readonly>
-          <img id="plus" src="./images/icon-plus.svg" alt="+">
-        </div>
-        <button class="addToCart">
-          <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#ffffff" fill-rule="nonzero"/></svg>
-          Add to cart
-        </button>
+        <img src="./images/image-avatar.png" alt="avatar" class="avatar">
       </div>
     </div>
-  </div>
-  <div class="overlay hidden">
-    <div class="lightBox   overlayChild hidden">
-      <div class="shownImage">
-        <div class="shownImageCont">
-          <div class="images2" id="0">
-            <img src="./images/image-product-1.jpg" alt="product1">
-            <img src="./images/image-product-2.jpg" alt="product2">
-            <img src="./images/image-product-3.jpg" alt="product3">
-            <img src="./images/image-product-4.jpg" alt="product4">
+    <div class="container">
+      <div class="cont1">
+        <div class="mainImage">
+          <div class="images" id="0">
+              <img src="./images/image-product-1.jpg" alt="product1">
+              <img src="./images/image-product-2.jpg" alt="product2">
+              <img src="./images/image-product-3.jpg" alt="product3">
+              <img src="./images/image-product-4.jpg" alt="product4">
           </div>
         </div>
-        <!-- <img src="./images/image-product-1.jpg" alt="product1"> -->
-        <svg id="previousLB" width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+        <div class="thumbnail">
+          <div class="thumbnailContainer selectedThumbnail">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="thumbnail1" id="thumbnail1">
+            <div class="thumbnail-overlay"></div>
+          </div>
+          <div class="thumbnailContainer">
+            <img src="./images/image-product-2-thumbnail.jpg" alt="thumbnail2" id="thumbnail2">
+            <div class="thumbnail-overlay"></div>
+          </div>
+          <div class="thumbnailContainer">
+            <img src="./images/image-product-3-thumbnail.jpg" alt="thumbnail3" id="thumbnail3">
+            <div class="thumbnail-overlay"></div>
+          </div>
+          <div class="thumbnailContainer">
+            <img src="./images/image-product-4-thumbnail.jpg" alt="thumbnail4" id="thumbnail4">
+            <div class="thumbnail-overlay"></div>
+          </div>
+        </div>
+        <svg id="previous" width="12" height="18" xmlns="http://www.w3.org/2000/svg">
           <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
         </svg>
-        <svg id="nextLB" width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+        <svg id="next" width="13" height="18" xmlns="http://www.w3.org/2000/svg">
           <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
         </svg>
-        <svg id="close" width="14" height="15" xmlns="http://www.w3.org/2000/svg">
-          <path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#fff" fill-rule="evenodd"/>
-        </svg>
       </div>
-      <div class="thumbnail2">
-        <div class="thumbnailContainer selectedThumbnail">
-          <img src="./images/image-product-1-thumbnail.jpg" alt="thumbnail1LB" id="thumbnail1LB">
-          <div class="thumbnail-overlay"></div>
+      <div class="cont2">
+        <h5>SNEAKER COMPANY</h5>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+        <div class="price">
+          <h2>$125.00</h2>
+          <h4>$250.00</h4>
         </div>
-        <div class="thumbnailContainer">
-          <img src="./images/image-product-2-thumbnail.jpg" alt="thumbnail2LB" id="thumbnail2LB">
-          <div class="thumbnail-overlay"></div>
-        </div>
-        <div class="thumbnailContainer">
-          <img src="./images/image-product-3-thumbnail.jpg" alt="thumbnail3LB" id="thumbnail3LB">
-          <div class="thumbnail-overlay"></div>
-        </div>
-        <div class="thumbnailContainer">
-          <img src="./images/image-product-4-thumbnail.jpg" alt="thumbnail4LB" id="thumbnail4LB">
-          <div class="thumbnail-overlay"></div>
+        <div class="inputs">
+          <div class="amount">
+            <img id="minus" src="./images/icon-minus.svg" alt="-">
+            <label for="amount"></label>
+            <input id="amount" name="amount" type="number" value="0" min=0 readonly>
+            <img id="plus" src="./images/icon-plus.svg" alt="+">
+          </div>
+          <button class="addToCart">
+            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#ffffff" fill-rule="nonzero"/></svg>
+            Add to cart
+          </button>
         </div>
       </div>
     </div>
-    <div class="menuOverlay hidden overlayChild">
-      <div class="menu-items">
-        <h3>Collections</h3>
-        <h3>Men</h3>
-        <h3>Women</h3>
-        <h3>About</h3>
-        <h3>Contact</h3>
+    <div class="overlay hidden">
+      <div class="lightBox   overlayChild hidden">
+        <div class="shownImage">
+          <div class="shownImageCont">
+            <div class="images2" id="0">
+              <img src="./images/image-product-1.jpg" alt="product1">
+              <img src="./images/image-product-2.jpg" alt="product2">
+              <img src="./images/image-product-3.jpg" alt="product3">
+              <img src="./images/image-product-4.jpg" alt="product4">
+            </div>
+          </div>
+          <!-- <img src="./images/image-product-1.jpg" alt="product1"> -->
+          <svg id="previousLB" width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
+          </svg>
+          <svg id="nextLB" width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
+          </svg>
+          <svg id="close" width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+            <path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#fff" fill-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="thumbnail2">
+          <div class="thumbnailContainer selectedThumbnail">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="thumbnail1LB" id="thumbnail1LB">
+            <div class="thumbnail-overlay"></div>
+          </div>
+          <div class="thumbnailContainer">
+            <img src="./images/image-product-2-thumbnail.jpg" alt="thumbnail2LB" id="thumbnail2LB">
+            <div class="thumbnail-overlay"></div>
+          </div>
+          <div class="thumbnailContainer">
+            <img src="./images/image-product-3-thumbnail.jpg" alt="thumbnail3LB" id="thumbnail3LB">
+            <div class="thumbnail-overlay"></div>
+          </div>
+          <div class="thumbnailContainer">
+            <img src="./images/image-product-4-thumbnail.jpg" alt="thumbnail4LB" id="thumbnail4LB">
+            <div class="thumbnail-overlay"></div>
+          </div>
+        </div>
       </div>
-      <img src="./images/icon-close.svg" alt="close" class="closeMenu">
+      <div class="menuOverlay hidden overlayChild">
+        <div class="menu-items">
+          <h3>Collections</h3>
+          <h3>Men</h3>
+          <h3>Women</h3>
+          <h3>About</h3>
+          <h3>Contact</h3>
+        </div>
+        <img src="./images/icon-close.svg" alt="close" class="closeMenu">
+      </div>
     </div>
-  </div>
+  </main>
   <script src="./script.js"></script>
 </body>
 </html>
