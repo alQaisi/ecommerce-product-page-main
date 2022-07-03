@@ -283,7 +283,10 @@ p{
     background-color: hsl(25, 100%, 94%);
     color: hsl(41, 100%, 51%);
 }
-.price h4{
+.price h3{
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    font-size: 1rem;
     position: relative;
     bottom:35px;
     opacity: .30;
@@ -677,7 +680,7 @@ svg:hover{
         width:45%;
         margin: 0 auto;
     }
-    .price h4{
+    .price h3{
         position: relative;
         bottom:0;
         opacity: .30;
@@ -748,9 +751,6 @@ svg:hover{
         width:17px;
         height: auto;
     }
-    /* .overlayChild.menuOverlay{
-        position:relative;
-    } */
     .items2{
         min-width:95px;
     }
