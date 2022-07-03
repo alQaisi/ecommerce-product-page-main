@@ -293,9 +293,6 @@ p{
     margin-top:30px;
     display: flex;
 }
-label{
-    display: none;
-}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
